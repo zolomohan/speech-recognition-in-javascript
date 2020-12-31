@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>Speech To Text</title>
+  </head>
+  <body class="container pt-5 bg-dark">
+    <div class="mt-4" id="div_language">
+      <h2 class="mb-3 text-light">Select Language</h2>
+      <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
+      <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
+    </div>
+    <h2 class="mt-4 text-light">Transcript</h2>
+    <div class="p-3" style="border: 1px solid gray; height: 300px; border-radius: 8px;">
+      <span id="final" class="text-light"></span>
+      <span id="interim" class="text-secondary"></span>
+    </div>
+    <div class="mt-4">
+      <button class="btn btn-success" id="start">Start</button>
+      <button class="btn btn-danger" id="stop">Stop</button>
+      <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+    </div>
+  </body>
+  <script src="./speechRecognition.js"></script>
+  <script src="./language.js"></script>
+</html>
