@@ -33,6 +33,7 @@ if ("webkitSpeechRecognition" in window) {
   };
 
   document.querySelector("#start").onclick = () => {
+    speechRecognition.lang = document.querySelector("#select_dialect").value;
     speechRecognition.start();
   };
   document.querySelector("#stop").onclick = () => {
